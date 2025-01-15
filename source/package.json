@@ -1,0 +1,29 @@
+{
+  "name": "source",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview --port 5050",
+    "watch-build": "npm-run-all build preview",
+    "watch": "nodemon -e js,vue,css,html --exec \"npm run build && npm run preview\"",
+    "watch-expose": "nodemon -e js,vue,css,html --exec \"npm run build && vite preview --host\"",
+    "vue": "npm init vite@latest source --template vue",
+    "tailwind": "npx tailwindcss init -p"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.7",
+    "npm-run-all": "^4.1.5",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "vite": "^6.0.1"
+  }
+}

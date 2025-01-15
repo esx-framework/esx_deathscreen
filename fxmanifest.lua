@@ -1,21 +1,29 @@
 fx_version 'cerulean'
 game 'gta5'
-
-name "esx_deathscreen"
-description "A deathscreen handler for ESX"
-author "ESX-Framework"
+description 'Death Screen'
+version '1.0'
+legacyversion '1.11.4'
 lua54 'yes'
-version "1.0.0"
 
-shared_scripts {
+shared_scripts { 
 	'@es_extended/imports.lua',
-	'shared/*.lua'
+	'@es_extended/locale.lua',
+    'locales/*.lua',
 }
 
 client_scripts {
-	'client/*.lua'
+    'config.lua',
+    'client/*.lua',
 }
 
-server_scripts {
-	'server/*.lua'
+ui_page 'nui/index.html'
+
+files {
+	'nui/*.html',
+	'nui/assets/*.js',
+	'nui/assets/*.css',
+}
+
+dependencies {
+	'es_extended'
 }
